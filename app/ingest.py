@@ -16,7 +16,7 @@ def load_documents():
     docs = []
 
     if not os.path.exists(DATA_PATH):
-        print("❌ data/docs folder not found")
+        print(" data/docs folder not found")
         return docs
 
     for file in os.listdir(DATA_PATH):
@@ -45,7 +45,7 @@ def create_db():
     docs = load_documents()
 
     if not docs:
-        print("❌ No documents found")
+        print(" No documents found")
         return
 
     chunks = split_documents(docs)
@@ -59,7 +59,7 @@ def create_db():
     )
 
     db.persist()
-    print("✅ DB created successfully!")
+    print(" DB created successfully!")
 
 
 if __name__ == "__main__":
