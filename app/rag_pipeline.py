@@ -6,7 +6,7 @@ from langchain.chains import RetrievalQA
 from app.config import CHROMA_PATH, EMBEDDING_MODEL, OPENAI_API_KEY, LLM_MODEL
 
 
-# ✅ LOAD EVERYTHING ONCE (GLOBAL)
+#LOAD EVERYTHING 
 
 # Embeddings
 embeddings = HuggingFaceEmbeddings(
@@ -37,7 +37,7 @@ qa_chain = RetrievalQA.from_chain_type(
 )
 
 
-# ✅ QUERY FUNCTION (FAST)
+# QUERY FUNCTION (FAST)
 def query_rag(question: str):
     result = qa_chain.invoke({"query": question})
 
