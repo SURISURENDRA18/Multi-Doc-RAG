@@ -1,12 +1,12 @@
 import streamlit as st
 import requests
 
-# ✅ Correct port
+#Correct port
 API_URL = "http://127.0.0.1:8002/ask"
 
 st.set_page_config(page_title="Multi-Doc RAG", layout="wide")
 
-st.title("📚 Multi-Doc RAG System")
+st.title("Multi-Doc RAG System")
 
 query = st.text_input("Ask your question:")
 
@@ -22,7 +22,7 @@ if query:
             if response.status_code == 200:
                 data = response.json()
 
-                # ✅ Safe access
+                # Safe access
                 answer = data.get("answer", "No answer returned")
                 sources = data.get("sources", [])
 
