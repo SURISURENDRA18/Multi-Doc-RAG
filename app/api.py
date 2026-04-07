@@ -11,7 +11,7 @@ class QueryRequest(BaseModel):
 
 @app.get("/")
 def home():
-    return {"message": "RAG API running 🚀"}
+    return {"message": "RAG API running"}
 
 
 @app.post("/ask")
